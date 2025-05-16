@@ -22,7 +22,7 @@ const slideUp=(delay)=>({
     console.log(css.container)
    return (
      <section 
-        className={`bg-[${css.primary}] z-50 text-white relative`}
+        className={`bg-red-700 w-full z-50 text-white relative`}
     >
          <div
             className={`${css.container} grid grid-cols-1 md:grid-cols-3 min-h-[700px] md:gap-32`}

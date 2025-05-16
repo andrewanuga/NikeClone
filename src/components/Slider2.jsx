@@ -71,7 +71,7 @@ const Slider2 = () => {
       return (
         <div className='w-full h-auto bg-[#221f24]'>
             <div className='flex justify-center items-center w-full h-auto p-5 bg-[#02fa40]'>
-              <h2 className='text-[26px] relative left-10 text-[#121212] merriweather mt-6 lg:m-10'>Shop The Classic</h2>
+              <h2 className='text-[26px] relative text-[#121212] merriweather my-5 lg:m-10'>Shop The Classic</h2>
             </div>
             <div className="carousel-container bg-transparent">
               <Splide options={options} aria-label="My Carousel">

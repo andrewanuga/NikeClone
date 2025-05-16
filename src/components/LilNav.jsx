@@ -51,42 +51,49 @@ const slideRight = (delay) => ({
     },
   },
 })
-const NavBar = ({setNav, funSetNav}) => {
+const LilNav = ({setNav, funSetNav}) => {
 
   return (
     <nav
-      className={`bg-[#121212] text-white h-[10%] w-full`}
+      className={`block md:hidden h-dvh transition-all duration-300 text-white ${setNav? "w-[80%]": "w-[0]"} fixed z-[100000000] top-0 right-0 glass`}
     >
 
       <div
-        className={`${css.container} py-6 flex justify-evenly items-center` }
+        className={`${css.container} m-4 py-6 flex justify-between items-center flex-wrap` }
       >
         {/* LOGO SECTION */}
-        <motion.div
-          variants={slideRight(0.1)}
-          initial="hidden"
-          animate="show"
-        >
-          <img 
-            src="./src/assets/nikeWhiteLogo.png"
-            alt="Logo"
-            className="w-[100px]"
-          />
-        </motion.div>
+        <div className="w-full h-auto flex justify-center items-center relative my-10">
+            <motion.div
+              variants={slideRight(0.1)}
+              initial="hidden"
+              animate="show"
+              className="w-full relative -top-10"
+            >
+              <img
+                src="./src/assets/nikeWhiteLogo.png"
+                alt="Logo"
+                className="w-[100px]"
+              />
+            </motion.div>
+            <div onClick={()=>funSetNav()} className="relative -top-10 w-auto h-auto justify-center items-center rounded-full p-3 bg-[#1e1d20] cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              </div>
+        </div>
          {/* MENU SECTION */}
-        <div className="hidden md:block">
-          <ul className="flex items-center gap-4">
+        <div className="w-full">
+          <ul className="flex items-center gap-4 justify-center flex-wrap">
             {NavBarMenu.map((item) => {
               return (
                 <NavLink
                   to={item.link}
+                  className={"w-full my-5"}
                 >
                   <motion.div
                     variants={slideRight(item.del)}
                     initial="hidden"
                     animate="show"
                     key={item.id}
-                    className="hover:rounded-full hover:bg-white hover:text-black hover:shadow-blue-700 shadow-2xl cursor-pointer"
+                    className="hover:rounded-full text-black text-shade hover:bg-white hover:text-black hover:shadow-blue-700 shadow-2xl cursor-pointer"
                   >
                     
                     <motion.li
@@ -101,14 +108,14 @@ const NavBar = ({setNav, funSetNav}) => {
           </ul>
         </div>
         {/* ICON SECTION */}
-        <div className="md:flex items-center gap-4 hidden">
+        <div className="flex items-center gap-4 absolute bottom-0 left-0 m-4">
           <motion.div
             variants={slideRight(1.2)}
             initial="hidden"
             animate="show"
             className="text-2xl cursor-pointer"
           >
-            <FaRegUserCircle />
+            <FaRegUserCircle/>
           </motion.div>
           <motion.div
             variants={slideRight(1.4)}
@@ -116,17 +123,17 @@ const NavBar = ({setNav, funSetNav}) => {
             animate="show"
             className="text-2xl cursor-pointer relative"
           >
-            <IoBagHandleOutline />
+            <IoBagHandleOutline/>
             <div className="w-4 absolute -top-1 -right-1 h-4 bg-red-500 text-white text-xs flex justify-center items-center rounded-full">2</div>
           </motion.div>
         </div>
         {/* MOBILE SECTION */}
-        <div className="md:hidden" onClick={()=>funSetNav()}>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"/></svg>
+        <div className="md:hidden">
+
         </div>
       </div>
     </nav>
   )
 }
 
-export default NavBar
+export default LilNav

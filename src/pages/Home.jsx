@@ -10,7 +10,6 @@ import Slider2 from "../components/Slider2";
 import HomeItems from "../data/Homedata"
 
 const Home = () => {
-
   const [query, setQuery] = useState('')
   const [results, setRestults]= useState(HomeItems)
   const [loading, setLoading] = useState(false)
