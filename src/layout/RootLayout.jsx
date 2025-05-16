@@ -10,7 +10,7 @@ const RootLayout = () => {
   }
   return (
     <div className="w-full h-dvh bg-[#2a292b] flex flex-wrap items-center justify-center">
-      <NavBar setNav={openNav} funSetNav={NavSetter}/>
+      <NavBar funSetNav={NavSetter}/>
       <LilNav setNav={openNav} funSetNav={NavSetter}/>
       <div className="w-full h-[90%]">
           <Outlet />

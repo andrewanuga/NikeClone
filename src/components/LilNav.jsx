@@ -75,7 +75,7 @@ const LilNav = ({setNav, funSetNav}) => {
                 className="w-[100px]"
               />
             </motion.div>
-            <div onClick={()=>funSetNav()} className="relative -top-10 w-auto h-auto justify-center items-center rounded-full p-3 bg-[#1e1d20] cursor-pointer">
+            <div onClick={()=>funSetNav()} className={`relative -top-10 w-auto h-auto ${setNav? "flex" : "hidden"}  justify-center items-center rounded-full p-3 bg-[#1e1d20] cursor-pointer`}>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
               </div>
         </div>

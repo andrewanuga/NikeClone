@@ -22,14 +22,14 @@ const slideUp=(delay)=>({
     console.log(css.container)
    return (
      <section 
-        className={`bg-red-700 w-full z-50 text-white relative`}
+        className={`bg-red-700 w-full z-50 text-white flex justify-center flex-wrap overflow-x-hidden relative`}
     >
          <div
             className={`${css.container} grid grid-cols-1 md:grid-cols-3 min-h-[700px] md:gap-32`}
         >
          
             {/* Brand Info */}
-            <div className="flex flex-col justify-end py-14 md:py-20">
+            <div className="flex flex-col md:justify-end justify-center py-14 md:py-20">
                 <div className="text-center md:text-left space-y-4 lg:max-w-[400px] relative left-10 md:left-14 lg:left-28">
                     <motion.h1
                         variants={slideUp(0.2)}
@@ -75,7 +75,7 @@ const slideUp=(delay)=>({
             </div>
             {/* Left Side section */}
             {/* Hero Image section */}
-            <div className="flex flex-col justify-between items-center relative gap-16">
+            <div className="flex flex-col md:justify-between justify-center items-center relative gap-16">
                 <motion.img
                     initial={{ opacity:0, x: 100, rotate: 20 }}
                     whileInView={{ opacity: 1, x: 0, rotate: 0 }}
@@ -100,7 +100,7 @@ const slideUp=(delay)=>({
                 </motion.div>
             </div> 
             {/* Right Side section */}
-            <div className="flex flex-col justify-end items-center lg:px-8 py-16">
+            <div className="flex flex-col md:justify-end justify-center items-center lg:px-8 py-16">
                 <motion.p
                     className="text-sm"
                     variants={slideUp(0.8)}

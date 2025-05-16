@@ -51,7 +51,7 @@ const slideRight = (delay) => ({
     },
   },
 })
-const NavBar = ({setNav, funSetNav}) => {
+const NavBar = ({funSetNav}) => {
 
   return (
     <nav
