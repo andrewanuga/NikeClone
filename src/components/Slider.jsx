@@ -25,13 +25,13 @@ const Slider = () => {
           aria-label="My Favorite Images"
         >
           <SplideSlide>
-            <img src="./src/assets/nike6.jpg" alt="Image 1"/>
+            <img src="/src/assets/nike6.jpg" alt="Image 1"/>
           </SplideSlide>
           <SplideSlide>
-            <img src="./src/assets/nike4.jpeg" alt="Image 2"/>
+            <img src="/src/assets/nike4.jpeg" alt="Image 2"/>
           </SplideSlide>
           <SplideSlide>
-            <img src="./src/assets/nike5.jpeg" alt="Image 3"/>
+            <img src="/src/assets/nike5.jpeg" alt="Image 3"/>
           </SplideSlide>
         </Splide>
         </div>

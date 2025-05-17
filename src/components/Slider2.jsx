@@ -5,42 +5,42 @@ const Slider2 = () => {
     const items = [
         {
           id: 1,
-          image: 'src/assets/slider2/airForce.avif',
+          image: '/src/assets/slider2/airForce.avif',
           title: 'Air Force 1',
         },
         {
           id: 2,
-          image: 'src/assets/slider2/airJordan.avif',
+          image: '/src/assets/slider2/airJordan.avif',
           title: 'Air Jordan',
         },
         {
           id: 3,
-          image: 'src/assets/slider2/airMax.avif',
+          image: '/src/assets/slider2/airMax.avif',
           title: 'Air Max',
         },
         {
           id: 4,
-          image: 'src/assets/slider2/c1ty.avif',
+          image: '/src/assets/slider2/c1ty.avif',
           title: 'C1TY',
         },
         {
             id: 5,
-            image: 'src/assets/slider2/cortez.avif',
+            image: '/src/assets/slider2/cortez.avif',
             title: 'Cortez',
           },
           {
             id: 6,
-            image: 'src/assets/slider2/dunk.avif',
+            image: '/src/assets/slider2/dunk.avif',
             title: 'Dunk',
           },
           {
             id: 7,
-            image: 'src/assets/slider2/fieldGeneral.avif',
+            image: '/src/assets/slider2/fieldGeneral.avif',
             title: 'Field General',
           },
           {
             id: 8,
-            image: 'src/assets/slider2/vomero.avif',
+            image: '/src/assets/slider2/vomero.avif',
             title: 'Vomero',
           },
       ];
